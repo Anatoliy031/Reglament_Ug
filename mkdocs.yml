@@ -1,0 +1,31 @@
+site_name: Регламенты ЮГ
+site_description: Интерактивная база регламентов (поиск, навигация, скачивание оригиналов)
+site_url: ""
+theme:
+  name: material
+  language: ru
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+plugins:
+  - search:
+      lang: ru
+  - awesome-pages
+  - tags
+markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.superfences
+  - toc:
+      permalink: true
+extra_css:
+  - stylesheets/extra.css
