@@ -1,0 +1,152 @@
+/* Основные стили для сайта регламентов */
+
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #333;
+  background-color: #f9f9f9;
+}
+
+header {
+  background-color: #0d47a1;
+  color: #fff;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+header .subtitle {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+
+main {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* Панель фильтров */
+#controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+#controls input[type="text"] {
+  flex: 1 1 250px;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+#controls .filters {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+#controls select {
+  padding: 0.4rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Список регламентов */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
+  transition: box-shadow 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.card h3 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  color: #0d47a1;
+}
+
+.card p {
+  margin: 0.25rem 0;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #e3f2fd;
+  color: #0d47a1;
+  border-radius: 3px;
+  padding: 0.15rem 0.4rem;
+  font-size: 0.75rem;
+  margin-right: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.meta {
+  font-size: 0.8rem;
+  color: #555;
+  margin-top: 0.5rem;
+}
+
+/* Детальная страница */
+#regDetails {
+  background-color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#regDetails h2 {
+  margin-top: 0;
+}
+
+#filesSection ul,
+#relatedSection ul {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+#filesSection li,
+#relatedSection li {
+  margin-bottom: 0.5rem;
+}
+
+#filesSection a,
+#relatedSection a {
+  color: #0d47a1;
+  text-decoration: none;
+}
+
+#filesSection a:hover,
+#relatedSection a:hover {
+  text-decoration: underline;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+  color: #777;
+  font-size: 0.8rem;
+  border-top: 1px solid #eee;
+  background-color: #f1f1f1;
+  margin-top: 2rem;
+}
