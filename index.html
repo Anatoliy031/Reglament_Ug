@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регламенты ЮГ</title>
+  <!-- Основной файл стилей -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Регламенты ЮГ</h1>
+    <p class="subtitle">Каталог внутренних нормативных документов компании с удобным поиском и фильтрами</p>
+  </header>
+  <main>
+    <!-- Панель управления: поиск и фильтры -->
+    <section id="controls">
+      <input type="text" id="searchInput" placeholder="Поиск по названию или коду…" oninput="updateList()" />
+      <div class="filters">
+        <label for="statusFilter">Статус:</label>
+        <select id="statusFilter" onchange="updateList()">
+          <option value="">Все</option>
+        </select>
+        <label for="themeFilter">Тематика:</label>
+        <select id="themeFilter" onchange="updateList()">
+          <option value="">Все</option>
+        </select>
+      </div>
+    </section>
+    <!-- Список регламентов -->
+    <section id="reglamentList" class="list">
+      <!-- Элементы списка генерируются скриптом -->
+    </section>
+  </main>
+  <footer>
+    <p>Данные загружаются из официального репозитория GitHub. Все вложения доступны для загрузки на страницах регламентов.</p>
+  </footer>
+  <script src="scripts.js"></script>
+</body>
+</html>
