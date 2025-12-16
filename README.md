@@ -1,17 +1,18 @@
-# Регламенты ЮГ (GitHub Pages)
+# Регламенты ЮГ — готовый сайт для GitHub Pages
 
-Этот репозиторий — статический сайт с регламентами на базе **MkDocs + Material**.
+## Как опубликовать (самый простой способ)
+1. Создайте новый репозиторий на GitHub (например, `reglaments-yug`).
+2. Загрузите **весь** этот архив в репозиторий (важно: папка `docs/` должна лежать в корне репозитория).
+3. В репозитории откройте: **Settings → Pages**.
+4. В разделе **Build and deployment** выберите:
+   - Source: **Deploy from a branch**
+   - Branch: `main` (или `master`)
+   - Folder: **/docs**
+5. Сохраните. GitHub покажет ссылку на сайт.
 
-## Локальный запуск
-```bash
-pip install -r requirements.txt
-mkdocs serve
-```
-Откройте: http://127.0.0.1:8000/
-
-## Публикация в GitHub Pages
-В репозитории уже есть workflow `.github/workflows/deploy.yml`.
-1) Залейте код в GitHub (ветка `main` или `master`).
-2) В настройках репозитория включите GitHub Pages (если требуется) и выберите источник `gh-pages`.
-
-После push в `main/master` сайт будет собран и опубликован.
+## Структура
+- `docs/index.html` — главная
+- `docs/catalog.html` — каталог с фильтрами
+- `docs/reglament.html?id=...` — карточка регламента
+- `docs/assets/…` — исходные файлы
+- `docs/data/reglaments.json` — метаданные и список файлов
