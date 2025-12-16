@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<title>Каталог — Регламенты ЮГ</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="css/style.css">
+<script defer src="js/app.js"></script>
+</head>
+<body>
+
+  <div class="container">
+    <div class="nav">
+      <div class="left">
+        <a class="btn" href="index.html">← Главная</a>
+        <div class="brand">Каталог регламентов</div>
+        <span class="pill">Найдено: <b id="count">—</b></span>
+      </div>
+      <div class="left">
+        <button class="btn" id="btnReset">Сбросить фильтры</button>
+      </div>
+    </div>
+
+    <div class="grid">
+      <div class="card" style="grid-column: span 12">
+        <div class="grid" style="margin-top:0">
+          <div style="grid-column: span 6">
+            <label>Поиск (номер, название, теги, файлы)</label>
+            <input id="fSearch" placeholder="Например: 402, прейскурант, эквайринг…">
+          </div>
+          <div style="grid-column: span 2">
+            <label>Тема</label>
+            <select id="fTheme"></select>
+          </div>
+          <div style="grid-column: span 2">
+            <label>Статус</label>
+            <select id="fStatus"></select>
+          </div>
+          <div style="grid-column: span 2">
+            <label>Год</label>
+            <select id="fYear"></select>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="grid-column: span 12">
+        <div class="table-wrap">
+          <table id="tbl">
+            <thead>
+              <tr>
+                <th style="width:90px">№</th>
+                <th style="width:120px">Дата</th>
+                <th>Документ</th>
+                <th style="width:260px">Тема</th>
+                <th style="width:130px">Статус</th>
+                <th style="width:110px">Файлы</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <div class="small" style="margin-top:10px">
+          Подсказка: можно открыть тему напрямую ссылкой вида <b>catalog.html#Дополнительные%20(нетарифные)%20услуги</b>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">Если нужно — скажите, добавлю новые регламенты в эту же структуру.</div>
+  </div>
+
+<script>
+
+(async ()=>{
+  const data = await RegSite.loadData();
+  RegSite.renderCatalog(data);
+})();
+
+</script>
+</body>
+</html>
